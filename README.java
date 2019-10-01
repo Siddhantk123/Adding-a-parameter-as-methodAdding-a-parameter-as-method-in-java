@@ -14,3 +14,32 @@ class BoxDemo{
 		mybox1.volume(); //display  volume of box
 	}
 }
+
+
+//Another program
+
+import java.util.Scanner;//java library for user input
+class Box{
+	double w; double h; double d;
+	double volume(){
+		return (w*h*d);
+	}
+	void SetDim(double width,double height,double depth){
+		w=width;
+		h=height;
+		d=depth;
+	}
+}
+class BoxDemo{
+	public static void main(String args[]){
+		Box mybox =  new Box();
+		double vol;
+		Scanner ob=new  Scanner(System.in);//Second method for user input
+		int a=ob.nextInt();
+		int b=ob.nextInt();
+		int c=ob.nextInt();
+		mybox.SetDim(a,b,c);
+		vol=mybox.volume();
+		System.out.println("Volume is : "+vol);
+	}
+}
